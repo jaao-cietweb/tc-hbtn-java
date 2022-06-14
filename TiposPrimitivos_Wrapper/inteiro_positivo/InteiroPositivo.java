@@ -20,6 +20,9 @@ public class InteiroPositivo {
     }
 
     boolean ehPrimo (){
+        if (valor == 1){
+            return true;
+        }
         for (int n = 2; n < valor; n++ ){
             if(valor % n == 0){
                 return false;
