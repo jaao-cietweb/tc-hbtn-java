@@ -51,7 +51,7 @@ public class PersonagemGame {
     }
 
     public void setNome(String nome) {
-        if(!nome.equals("") && nome != null){
+        if(nome != "" && nome != null){
             this.nome = nome;
         }
     }
