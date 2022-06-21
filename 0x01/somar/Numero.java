@@ -1,5 +1,5 @@
 public class Numero {
-    public static int somar (int i, int b){
-        return i + b;
+    public static int somar (int a, int b){
+        return a + b;
     }
 }
