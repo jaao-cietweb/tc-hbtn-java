@@ -22,29 +22,30 @@ public class ContaBancariaBasica {
         if(valor<=0){
             throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }
-        else if (valor > saldo) {
+        else if (valor > this.saldo) {
             throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
         }
-        else saldo -= valor;
+        else this.saldo -= valor;
     }
 
     public double calcularTarifaMensal(){
-        if (saldo > 100 ){
-            return saldo * 0.1;
+        double tarifa = this.saldo * 0.1;
+        if (tarifa > 10){
+            return 10;
         }
-        else return 10;
+        return tarifa;
 
     }
 
     public double calcularJurosMensal(){
-        if (saldo <= 0){
-            return 0;
+        if (this.saldo > 0){
+            return  getSaldo() * (getTaxaJurosAnual()/100) / 12;
         }
-        return getSaldo() * (getTaxaJurosAnual()/100) / 12;
+        return 0;
     }
 
     public void aplicarAtualizacaoMensal(){
-        saldo = getSaldo() +calcularJurosMensal() - calcularTarifaMensal();
+        saldo = getSaldo() + calcularJurosMensal() - calcularTarifaMensal();
     }
 
     public String getNumeracao() {
