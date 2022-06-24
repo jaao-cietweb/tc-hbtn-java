@@ -6,10 +6,10 @@ public class Livro {
     String autor;
     double preco;
 
-    public Livro(String titulo, String autor, double preco) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.preco = preco;
+    public Livro(String titulo, String autor, double preco) throws Exception {
+        setTitulo(titulo);
+        setAutor(autor);
+        setPreco(preco);
     }
 
     public String getTitulo() {
@@ -17,7 +17,7 @@ public class Livro {
     }
 
     public void setTitulo(String titulo) throws Exception {
-        if(titulo.length()<3) {
+        if(titulo.length() > 3) {
             this.titulo = titulo;
         }
         else throw new LivroInvalidoException("Titulo de livro invalido");
