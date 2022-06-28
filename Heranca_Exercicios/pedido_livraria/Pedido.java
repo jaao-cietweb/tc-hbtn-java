@@ -10,9 +10,13 @@ public class Pedido {
 
     double calcularTotal(){
         double somatorio = 0;
+        double desconto = 0;
         for (ItemPedido item :itens) {
-            somatorio += item.getQuantidade() * item.getProduto().obterPrecoLiquido();
+            somatorio += (item.getProduto().obterPrecoLiquido() * item.getQuantidade());
         }
-        return somatorio;
+        if (percentualDesconto != 0) {
+             desconto = somatorio * (percentualDesconto / 100);
+        }
+        return somatorio - desconto;
     }
 }
