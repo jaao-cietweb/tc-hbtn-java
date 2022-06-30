@@ -9,7 +9,7 @@ public class AnalisadorFrase {
         String [] fraseSeparada = fraseTratada.split(" ");
         for (String palavra: fraseSeparada) {
             if (map.containsKey(palavra.toLowerCase())){
-                map.put(palavra.toLowerCase(), (map.get(palavra.toLowerCase() +1)));
+                map.put(palavra.toLowerCase(), (map.get(palavra.toLowerCase() ))+1);
             }
             else {
                 map.put(palavra.toLowerCase(), 1);
