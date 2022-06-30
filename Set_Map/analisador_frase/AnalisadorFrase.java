@@ -5,7 +5,7 @@ public class AnalisadorFrase {
     public static TreeMap contagemPalavras(String frase){
         TreeMap <String, Integer> map = new TreeMap<>();
 
-        String fraseTratada = frase.replace("?.! " , "");
+        String fraseTratada = frase.replaceAll("[?.!]" , "");
         String [] fraseSeparada = fraseTratada.split(" ");
         for (String palavra: fraseSeparada) {
             if (map.containsKey(palavra.toLowerCase())){
