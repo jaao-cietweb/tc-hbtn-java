@@ -23,7 +23,7 @@ public class ListaTodo {
 
     public boolean marcarTarefaFeita(int id){
         for (Tarefa tarefa2: tarefas) {
-            if (tarefa2.identificador == id) {
+            if (tarefa2.getIdentificador() == id) {
                 tarefa2.setEstahFeita(true);
                 return true;
             }
