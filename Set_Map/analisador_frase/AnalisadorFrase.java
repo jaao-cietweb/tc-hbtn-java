@@ -2,7 +2,7 @@ import java.util.TreeMap;
 
 public class AnalisadorFrase {
 
-    public static TreeMap contagemPalavras(String frase){
+    public static TreeMap <String, Integer> contagemPalavras(String frase){
         TreeMap <String, Integer> map = new TreeMap<>();
 
         String fraseTratada = frase.replaceAll("[?.!]" , "");
