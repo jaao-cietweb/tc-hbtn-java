@@ -13,9 +13,9 @@ public class ListaTelefonica {
 
         contatos.forEach((chave, valor) ->{
             if (chave.equals(nome) && valor.contains(telefone)) {
-                throw new IllegalArgumentException("Telefone jah existente para essa pessoa.");
+                throw new IllegalArgumentException("Telefone jah existente para essa pessoa");
             } else if (valor.contains(telefone)) {
-                throw new IllegalArgumentException("Telefone jah pertence a outra pessoa.");
+                throw new IllegalArgumentException("Telefone jah pertence a outra pessoa");
             }
         });
 
