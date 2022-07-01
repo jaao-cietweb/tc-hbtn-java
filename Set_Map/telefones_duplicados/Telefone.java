@@ -12,6 +12,26 @@ public class Telefone {
         return "(" + codigoArea + ") " + numero;
     }
 
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (!(o instanceof Telefone)) return false;
+
+        Telefone telefone = (Telefone) o;
+
+        if (!codigoArea.equals(telefone.codigoArea)) return false;
+        return numero.equals(telefone.numero);
+    }
+
+    @Override
+    public int hashCode() {
+
+        int result = codigoArea.hashCode();
+        result = 5 * result + numero.hashCode();
+        return result;
+    }
+
     public String getCodigoArea() {
         return codigoArea;
     }

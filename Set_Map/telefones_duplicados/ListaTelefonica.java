@@ -21,6 +21,9 @@ public class ListaTelefonica {
 
         if(array == null){
             array = new HashSet<Telefone>();
+        } else if (contatos.containsKey(nome)) {
+            array.add(telefone);
+            contatos.put(nome, array);
         }
         array.add(telefone);
         contatos.put(nome,array);
