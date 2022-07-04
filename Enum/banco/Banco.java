@@ -43,23 +43,22 @@ public class Banco {
         return false;
     }
 
-    public void listarClientes(String nomeAgencia, boolean imprimeTransacoes){
+    public void listarClientes(String nomeAgencia, boolean imprimeTransacoes) {
         Agencia agencia = buscarAgencia(nomeAgencia);
 
-        if (agencia != null){
-            int i =1;
-            for (Cliente cliente : agencia.getClientes()){
+        if (agencia != null) {
+            int i = 1;
+            for (Cliente cliente : agencia.getClientes()) {
                 System.out.println("Cliente: " + cliente.getNome() + " [" + i + "]");
                 i++;
-                if (imprimeTransacoes){
+                if (imprimeTransacoes) {
                     int j = 1;
-                    for (Double transacao: cliente.getTransacoes()){
+                    for (Double transacao : cliente.getTransacoes()) {
                         System.out.println("  [" + j + "] valor " + transacao);
                         j++;
                     }
                 }
             }
         }
-
     }
 }

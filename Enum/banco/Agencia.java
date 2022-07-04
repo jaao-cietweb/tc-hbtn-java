@@ -19,7 +19,7 @@ public class Agencia {
 
     public boolean novoCliente (String nomeDoCliente, double valorInicial){
         Cliente cliente = (buscarCliente(nomeDoCliente));
-        if (!(cliente == null)){
+        if (cliente == null){
             this.clientes.add(new Cliente(nomeDoCliente, valorInicial));
             return true;
         }
