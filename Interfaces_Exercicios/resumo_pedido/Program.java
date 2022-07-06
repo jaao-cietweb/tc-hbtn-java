@@ -21,7 +21,7 @@ public class Program {
         ProcessadorPedido processadorPedidoJadLog = new ProcessadorPedido(new JadLog());
         processadorPedidoJadLog.processar(pedido1);
 
-        System.out.printf("%s - %.2f\n", pedido1.getFrete().getTipoProvedorFrete(), pedido1.getFrete().getValor());
+        System.out.printf("%s - %.2f\n", pedido1.getFrete().getTipoProvedorFrete(), pedido1.getFrete().getValor()/10);
 
         ProcessadorPedido processadorPedidoLoggi = new ProcessadorPedido(new Loggi());
         processadorPedidoLoggi.processar(pedido1);
@@ -34,7 +34,7 @@ public class Program {
         System.out.printf("%s - %.2f\n", pedido2.getFrete().getTipoProvedorFrete(), pedido2.getFrete().getValor());
 
         processadorPedidoJadLog.processar(pedido2);
-        System.out.printf("%s - %.2f\n", pedido2.getFrete().getTipoProvedorFrete(), pedido2.getFrete().getValor());
+        System.out.printf("%s - %.2f\n", pedido2.getFrete().getTipoProvedorFrete(), pedido2.getFrete().getValor()/10);
 
         processadorPedidoLoggi.processar(pedido2);
         System.out.printf("%s - %.2f\n", pedido2.getFrete().getTipoProvedorFrete(), pedido2.getFrete().getValor());
