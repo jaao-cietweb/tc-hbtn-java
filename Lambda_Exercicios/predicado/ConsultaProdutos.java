@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 public class ConsultaProdutos {
 
-    static List<Produto> filtrar(List<Produto> produtos, Predicate<Produto> objeto){
+    public static List<Produto> filtrar(List<Produto> produtos, Predicate<Produto> objeto){
         List<Produto> produtos1 = new ArrayList<>();
 
         for (Produto produto: produtos) {
