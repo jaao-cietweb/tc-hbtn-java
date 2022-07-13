@@ -13,12 +13,14 @@ public class Consulta {
     }
 
     public static Produto obterProdutoMaiorPreco (List<Produto> produtos){
-        List<Produto> produtos1 = produtos.stream().sorted(Comparator.comparing(Produto ::getPreco).reversed()).collect(Collectors.toList());
+        List<Produto> produtos1 = produtos.stream().sorted(Comparator.comparing
+                (Produto ::getPreco).reversed()).collect(Collectors.toList());
         return produtos1.get(0);
     }
 
     public static List<Produto> obterProdutosPorPrecoMinimo(List<Produto> produtos, int precoMinimo){
-        List<Produto> produtos1 = produtos.stream().sorted(Comparator.comparing(Produto::getPreco).reversed()).takeWhile(produto -> produto.getPreco() > precoMinimo).collect(toList());
+        List<Produto> produtos1 = produtos.stream().sorted(Comparator.comparing
+                (Produto::getPreco).reversed()).takeWhile(produto -> produto.getPreco() >= precoMinimo).collect(toList());
         return produtos1;
     }
 }
