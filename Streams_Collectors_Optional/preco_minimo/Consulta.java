@@ -19,8 +19,6 @@ public class Consulta {
     }
 
     public static List<Produto> obterProdutosPorPrecoMinimo(List<Produto> produtos, int precoMinimo){
-        List<Produto> produtos1 = produtos.stream().sorted(Comparator.comparing
-                (Produto::getPreco).reversed()).takeWhile(produto -> produto.getPreco() >= precoMinimo).collect(toList());
-        return produtos1;
+        return produtos.stream().filter(produto -> produto.getPreco() >= precoMinimo).collect(toList());
     }
 }
