@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
 
     int codigo;
     String nome;
@@ -20,7 +20,7 @@ public class Pessoa {
                 "]" + nome +
                 " " + cargo +
                 " " + idade +
-                " R$ " + salario;
+                " R$ " + String.format("%.6f" , getSalario());
     }
 
     public int getCodigo() {
@@ -41,5 +41,10 @@ public class Pessoa {
 
     public double getSalario() {
         return salario;
+    }
+
+    @Override
+    public int compareTo(Pessoa pessoa) {
+        return getNome().compareTo(pessoa.nome);
     }
 }
