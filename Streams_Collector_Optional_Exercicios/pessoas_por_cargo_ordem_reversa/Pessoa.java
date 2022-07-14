@@ -21,7 +21,7 @@ public class Pessoa implements Comparable<Pessoa> {
         final var locale = new Locale("pt", "BR");
         Locale.setDefault(locale);
         return "[" + codigo +
-                "]" + nome +
+                "] " + nome +
                 " " + cargo +
                 " " + idade +
                 " R$ " + String.format("%.6f" , getSalario());
