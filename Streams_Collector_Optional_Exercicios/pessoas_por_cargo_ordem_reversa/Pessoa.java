@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Pessoa implements Comparable<Pessoa> {
 
     int codigo;
@@ -16,6 +18,8 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public String toString() {
+        final var locale = new Locale("pt", "BR");
+        Locale.setDefault(locale);
         return "[" + codigo +
                 "]" + nome +
                 " " + cargo +
