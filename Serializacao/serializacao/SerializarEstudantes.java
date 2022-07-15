@@ -33,7 +33,7 @@ public class SerializarEstudantes <Estudante>{
     }
 
     public List<Estudante> desserializar(){
-        List<Estudante> e1 = null;
+        @SuppressWarnings("unchecked") List<Estudante> e1 = null;
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try {
