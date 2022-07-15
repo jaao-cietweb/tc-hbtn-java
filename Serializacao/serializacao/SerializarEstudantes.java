@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class SerializarEstudantes <Estudante>{
     static String nomeArquivo;
 
@@ -32,6 +33,7 @@ public class SerializarEstudantes <Estudante>{
         }
     }
 
+    @SuppressWarnings("unchecked")
     public List<Estudante> desserializar(){
         @SuppressWarnings("unchecked") List<Estudante> e1 = null;
         FileInputStream fis = null;
