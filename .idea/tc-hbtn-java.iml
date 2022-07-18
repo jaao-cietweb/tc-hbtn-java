@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/0x00/nomeclatura" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0x00/nomenclatura" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/apache-maven/financeiro-api/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
